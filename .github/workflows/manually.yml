@@ -8,8 +8,8 @@ on:
         default: 'dcevm11-jdk-11.0.12-adopt'
       dcevm_tag:
         description: 'dcevm tag'
-        required: false
-        default: ''
+        required: true
+        default: 'dcevm11-jdk-11.0.11+1'
 
 jobs:
   dcevm:
