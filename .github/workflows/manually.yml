@@ -5,11 +5,11 @@ on:
       dcevm_branch:
         description: 'dcevm branch'
         required: true
-        default: 'dcevm11-jdk-11.0.11-adopt'
+        default: 'dcevm11-jdk-11.0.12-adopt'
       dcevm_tag:
         description: 'dcevm tag'
-        required: true
-        default: 'dcevm-11.0.11+2 '
+        required: false
+        default: ''
 
 jobs:
   dcevm:
@@ -21,7 +21,7 @@ jobs:
         javaToBuild: [jdk11u]
     steps:
       - uses: actions/checkout@v1
-      - uses: liuzhengyang/action-build-dcevm@v2
+      - uses: Ivnoidea/action-build-dcevm@v2
         id: buildJDK
         with:
           impl: dcevm
